@@ -26,9 +26,13 @@ class ViewController: UIViewController {
             operatorQueue = [String]()
             dotAvailable = true
         
-        } else if sender.currentTitle == "+/-" {
+        } else if sender.currentTitle == "+/-"{
             
-            display.text = String(stringInterpolationSegment: (display.text! as NSString).doubleValue * -1)
+            if display.text != "0" {
+            
+                display.text = String(stringInterpolationSegment: (display.text! as NSString).doubleValue * -1)
+            
+            }
             
         } else if sender.currentTitle == "%" {
             
